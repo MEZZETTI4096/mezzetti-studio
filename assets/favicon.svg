@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Mezzetti">
+  <!-- ink background disc -->
+  <circle cx="100" cy="100" r="96" fill="#0B0B0A"/>
+  <!-- inscribed triangle -->
+  <polygon points="100,22 167.55,139 32.45,139" fill="none" stroke="#F4F1EA" stroke-width="3" stroke-opacity="0.7"/>
+  <!-- three brand-color vertices -->
+  <circle cx="100" cy="22" r="14" fill="#D6FF3A"/>
+  <circle cx="167.55" cy="139" r="14" fill="#6B2BFF"/>
+  <circle cx="32.45" cy="139" r="14" fill="#FF5B1F"/>
+  <!-- origin -->
+  <circle cx="100" cy="100" r="5" fill="#F4F1EA"/>
+</svg>
