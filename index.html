@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mezzetti⁴⁰⁹⁶ — Estúdio de design de autor</title>
+<meta name="description" content="Estúdio de autor para identidade visual + UI/UX. 4096 possibilidades. Uma assinatura.">
+<meta property="og:title" content="Mezzetti⁴⁰⁹⁶">
+<meta property="og:description" content="4096 possibilidades. Uma assinatura.">
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b0b0a;
+  --ink:#0b0b0a;
+  --paper:#f4f1ea;
+  --paper-dim:#9c978c;
+  --rule:#23221f;
+  --lime:#d6ff3a;
+  --violet:#6b2bff;
+  --orange:#ff5b1f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--paper);font-family:'Inter',sans-serif;font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 56px}
+.mono{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper-dim)}
+.rule{border-top:1px solid var(--rule)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(12px);background:rgba(11,11,10,.72);border-bottom:1px solid var(--rule)}
+nav .row{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+nav .brand{display:flex;align-items:center;gap:14px}
+nav .brand svg{width:32px;height:32px;color:var(--paper)}
+nav .brand .word{font-family:'Fraunces',serif;font-weight:300;font-size:22px;letter-spacing:-.03em;position:relative}
+nav .brand .word .exp{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;letter-spacing:.06em;color:var(--lime);position:absolute;top:1px;right:-22px}
+nav .links{display:flex;gap:32px}
+nav .links a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-dim);text-decoration:none;transition:color .2s}
+nav .links a:hover{color:var(--paper)}
+
+/* HERO */
+.hero{padding:160px 0 96px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:48px}
+.hero .glyph{width:200px;height:200px;color:var(--paper)}
+.hero .glyph svg{width:100%;height:100%;animation:slow-rotate 240s linear infinite}
+@keyframes slow-rotate{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.hero .glyph svg{animation:none}}
+.hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:104px;letter-spacing:-.045em;line-height:.95;max-width:18ch}
+.hero h1 em{font-style:italic;color:var(--lime)}
+.hero .sub{font-size:19px;color:var(--paper-dim);max-width:48ch;line-height:1.55}
+.hero .meta{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.hero .meta span{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--paper-dim);text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.hero .meta span i{display:inline-block;width:6px;height:6px;border-radius:50%}
+.hero .meta span.l i{background:var(--lime)}
+.hero .meta span.v i{background:var(--violet)}
+.hero .meta span.o i{background:var(--orange)}
+
+/* SECTION CHROME */
+section.s{padding:96px 0}
+.s-label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px;gap:24px}
+.s h2{font-family:'Fraunces',serif;font-weight:300;font-size:56px;letter-spacing:-.035em;line-height:.98;max-width:18ch;margin-bottom:32px}
+.s h2 em{font-style:italic;color:var(--lime)}
+.s p{font-size:18px;line-height:1.6;max-width:60ch;margin-bottom:18px}
+.s p.dim{color:var(--paper-dim);font-size:14px}
+
+/* MANIFESTO */
+.manifesto{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.manifesto .left p:first-child{font-family:'Fraunces',serif;font-weight:300;font-size:34px;letter-spacing:-.025em;line-height:1.2;max-width:18ch}
+.manifesto .left p:first-child em{font-style:italic}
+.manifesto .right p strong{font-weight:500;color:var(--paper)}
+.manifesto .right p em{font-style:italic;color:var(--lime)}
+.manifesto .right p:last-child{font-style:italic;color:var(--paper-dim)}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.service{border:1px solid var(--rule);background:#111110;padding:36px 30px;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s,transform .2s}
+.service:hover{border-color:var(--paper-dim);transform:translateY(-2px)}
+.service .num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--paper-dim);margin-bottom:18px}
+.service h3{font-family:'Fraunces',serif;font-weight:300;font-size:30px;letter-spacing:-.025em;line-height:1;margin-bottom:18px}
+.service p{font-size:15px;color:var(--paper-dim);line-height:1.55;margin-bottom:24px}
+.service ul{list-style:none}
+.service li{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper);padding:4px 0}
+.service li::before{content:"— ";color:var(--paper-dim)}
+.service:nth-child(1) .accent{color:var(--lime)}
+.service:nth-child(2) .accent{color:var(--violet)}
+.service:nth-child(3) .accent{color:var(--orange)}
+
+/* PRINCIPLES */
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 64px;margin-top:32px}
+.principle{display:grid;grid-template-columns:60px 1fr;gap:24px;align-items:start}
+.principle .num{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:500;color:var(--paper);line-height:1}
+.principle h4{font-family:'Fraunces',serif;font-weight:300;font-size:24px;letter-spacing:-.02em;line-height:1.1;margin-bottom:10px}
+.principle h4 em{font-style:italic;color:var(--lime)}
+.principle:nth-child(2) h4 em{color:var(--violet)}
+.principle:nth-child(3) h4 em{color:var(--orange)}
+.principle:nth-child(4) h4 em{color:var(--lime)}
+.principle p{font-size:14px;color:var(--paper-dim);line-height:1.6;max-width:48ch}
+
+/* GRADIENT FIELD */
+.field{
+  height:280px;margin:96px 0;
+  background:
+    radial-gradient(at 20% 30%, var(--lime), transparent 55%),
+    radial-gradient(at 80% 40%, var(--orange), transparent 55%),
+    radial-gradient(at 50% 90%, var(--violet), transparent 60%),
+    var(--ink);
+  position:relative;display:flex;align-items:flex-end;padding:32px;
+}
+.field::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(11,11,10,.06) 0 1px,transparent 1px 8px);mix-blend-mode:multiply;opacity:.4;pointer-events:none}
+.field .label{position:relative;z-index:2;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--paper);text-transform:uppercase}
+.field .quote{position:absolute;top:32px;left:32px;right:32px;font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:38px;line-height:1.1;letter-spacing:-.02em;color:var(--paper);max-width:20ch;z-index:2}
+
+/* CONTACT */
+.contact{padding:120px 0 96px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:32px}
+.contact h2{font-size:80px;max-width:14ch}
+.contact .email{
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:'Fraunces',serif;font-weight:300;font-size:38px;letter-spacing:-.03em;
+  color:var(--paper);text-decoration:none;padding:18px 32px;border:1px solid var(--rule);
+  transition:border-color .2s,background .2s;
+}
+.contact .email:hover{border-color:var(--lime);background:#111110}
+.contact .email .arrow{font-family:'JetBrains Mono',monospace;font-size:18px;color:var(--lime)}
+.contact .socials{display:flex;gap:24px;margin-top:8px}
+.contact .socials a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-dim);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .2s,border-color .2s}
+.contact .socials a:hover{color:var(--paper);border-bottom-color:var(--lime)}
+
+/* FOOTER */
+footer{padding:48px 0;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+footer .left{display:flex;align-items:center;gap:14px}
+footer .left svg{width:24px;height:24px;color:var(--paper)}
+footer .left .word{font-family:'Fraunces',serif;font-weight:300;font-size:16px;position:relative}
+footer .left .word .exp{font-family:'JetBrains Mono',monospace;font-size:8px;font-weight:500;color:var(--lime);position:absolute;top:1px;right:-18px}
+
+/* RESPONSIVE */
+@media (max-width:920px){
+  .wrap{padding:0 24px}
+  nav .links{display:none}
+  .hero{padding:120px 0 64px;gap:32px}
+  .hero .glyph{width:140px;height:140px}
+  .hero h1{font-size:56px}
+  .hero .sub{font-size:16px}
+  section.s{padding:64px 0}
+  .s h2{font-size:38px}
+  .manifesto{grid-template-columns:1fr;gap:32px}
+  .manifesto .left p:first-child{font-size:26px}
+  .services{grid-template-columns:1fr}
+  .principles{grid-template-columns:1fr;gap:32px}
+  .field{height:220px;margin:64px 0}
+  .field .quote{font-size:24px}
+  .contact{padding:64px 0}
+  .contact h2{font-size:48px}
+  .contact .email{font-size:24px;padding:14px 22px}
+  footer{padding:32px 0}
+}
+@media (max-width:420px){
+  .wrap{padding:0 20px}
+  .hero h1{font-size:42px}
+  .s h2{font-size:30px}
+  .contact h2{font-size:36px}
+  .contact .email{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- glyph reused via SVG symbol -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="glyph" viewBox="0 0 200 200">
+      <g transform="translate(100 100)">
+        <g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.4">
+          <circle cx="0" cy="0" r="39"/>
+          <circle cx="0" cy="-39" r="39"/>
+          <circle cx="33.775" cy="-19.5" r="39"/>
+          <circle cx="33.775" cy="19.5" r="39"/>
+          <circle cx="0" cy="39" r="39"/>
+          <circle cx="-33.775" cy="19.5" r="39"/>
+          <circle cx="-33.775" cy="-19.5" r="39"/>
+        </g>
+        <circle cx="0" cy="0" r="78" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <polygon points="0,-78 67.55,39 -67.55,39" fill="none" stroke="currentColor" stroke-width="1.2" stroke-opacity="0.55"/>
+        <g stroke="currentColor" stroke-width="1.2" stroke-opacity="0.55">
+          <line x1="0" y1="-72" x2="0" y2="-78" transform="rotate(30)"/>
+          <line x1="0" y1="-72" x2="0" y2="-78" transform="rotate(60)"/>
+          <line x1="0" y1="-72" x2="0" y2="-78" transform="rotate(90)"/>
+          <line x1="0" y1="-72" x2="0" y2="-78" transform="rotate(150)"/>
+          <line x1="0" y1="-72" x2="0" y2="-78" transform="rotate(180)"/>
+          <line x1="0" y1="-72" x2="0" y2="-78" transform="rotate(210)"/>
+          <line x1="0" y1="-72" x2="0" y2="-78" transform="rotate(270)"/>
+          <line x1="0" y1="-72" x2="0" y2="-78" transform="rotate(300)"/>
+          <line x1="0" y1="-72" x2="0" y2="-78" transform="rotate(330)"/>
+        </g>
+        <circle cx="0" cy="-78" r="6.5" fill="#D6FF3A"/>
+        <circle cx="67.55" cy="39" r="6.5" fill="#6B2BFF"/>
+        <circle cx="-67.55" cy="39" r="6.5" fill="#FF5B1F"/>
+        <circle cx="0" cy="0" r="2.4" fill="currentColor"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap row">
+    <a href="#top" class="brand" style="text-decoration:none;color:inherit">
+      <svg><use href="#glyph"/></svg>
+      <span class="word">Mezz<em style="font-style:italic">e</em>tti<span class="exp">4096</span></span>
+    </a>
+    <div class="links">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#principios">Princípios</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<div id="top"></div>
+
+<!-- HERO -->
+<header class="wrap hero">
+  <div class="glyph"><svg><use href="#glyph"/></svg></div>
+  <h1>4096 possibilidades.<br><em>Uma assinatura.</em></h1>
+  <p class="sub">Estúdio de autor para identidade visual e UI/UX. Operando no cruzamento entre rigor de sistema e expressão editorial — onde toda peça é uma coordenada exata no campo da possibilidade.</p>
+  <div class="meta">
+    <span class="l"><i></i>São Paulo · BR</span>
+    <span class="v"><i></i>Estúdio · est. 2026</span>
+    <span class="o"><i></i>3 clientes simultâneos</span>
+  </div>
+</header>
+
+<!-- SOBRE -->
+<section class="s wrap" id="sobre">
+  <div class="s-label"><span class="mono">01 / Sobre</span><span class="mono">Manifesto</span></div>
+  <div class="manifesto">
+    <div class="left">
+      <p><em>Mezzetti⁴⁰⁹⁶ é um estúdio de autor</em> que opera no cruzamento entre rigor de sistema e expressão editorial.</p>
+    </div>
+    <div class="right">
+      <p>Cada projeto é uma das <strong>4096 combinações</strong> possíveis dentro de um sistema preciso. Toda peça nasce de uma coordenada — nunca de um template. A atenção obsessiva ao detalhe não é slogan: é critério.</p>
+      <p>O cliente médio não vai perceber o kerning ajustado, a hierarquia que respira, o sistema cromático com opinião. Mas o cliente premium reconhece tudo na primeira olhada. <strong>É para esse olhar que a gente trabalha.</strong></p>
+      <p><em>Não vendemos design. Vendemos a assinatura que separa marca de template.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- GRADIENT FIELD -->
+<div class="wrap">
+  <div class="field">
+    <div class="quote">Cada projeto, uma das 4096 combinações.</div>
+    <div class="label">field of possibility · Mezzetti⁴⁰⁹⁶</div>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section class="s wrap" id="servicos">
+  <div class="s-label"><span class="mono">02 / Serviços</span><span class="mono">O que fazemos</span></div>
+  <h2>Três entregas, <em>um sistema.</em></h2>
+  <div class="services">
+    <div class="service">
+      <div>
+        <div class="num accent">SERV.01</div>
+        <h3>Identidade visual</h3>
+        <p>Da tese de marca ao sistema completo. Não entregamos só logo — entregamos posicionamento, paleta, tipografia, regras de aplicação e manual.</p>
+      </div>
+      <ul>
+        <li>Estratégia de marca</li>
+        <li>Logo + sistema</li>
+        <li>Manual de identidade</li>
+        <li>Templates de aplicação</li>
+      </ul>
+    </div>
+    <div class="service">
+      <div>
+        <div class="num accent">SERV.02</div>
+        <h3>UI/UX para sites e apps</h3>
+        <p>Design de produto com pensamento de sistema. Componentes, tokens, fluxos. Entrega no Figma pronta para desenvolvimento — ou implementada em código.</p>
+      </div>
+      <ul>
+        <li>Wireframes + fluxos</li>
+        <li>Design system</li>
+        <li>Protótipos no Figma</li>
+        <li>Handoff para dev</li>
+      </ul>
+    </div>
+    <div class="service">
+      <div>
+        <div class="num accent">SERV.03</div>
+        <h3>Design gráfico de autor</h3>
+        <p>Peças editoriais, materiais impressos, posters, capas. Para marcas culturais, projetos de moda e lifestyle que precisam de assinatura visual, não de template.</p>
+      </div>
+      <ul>
+        <li>Editorial e impressos</li>
+        <li>Embalagem</li>
+        <li>Direção de arte</li>
+        <li>Conteúdo para redes</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCÍPIOS -->
+<section class="s wrap" id="principios">
+  <div class="s-label"><span class="mono">03 / Princípios</span><span class="mono">Como pensamos</span></div>
+  <h2>Quatro regras que <em>guiam toda peça.</em></h2>
+  <div class="principles">
+    <div class="principle">
+      <div class="num">01</div>
+      <div>
+        <h4>Sistema <em>antes de estética.</em></h4>
+        <p>Toda decisão visual começa com uma decisão estrutural. Cor, tipo, grid e hierarquia são definidos como sistema — depois, executados com cuidado. Estética sem sistema é decoração.</p>
+      </div>
+    </div>
+    <div class="principle">
+      <div class="num">02</div>
+      <div>
+        <h4>Detalhe <em>como assinatura.</em></h4>
+        <p>O kerning ajustado, o espaço que respira, a curva que tem opinião. Cliente médio não vê. Cliente premium reconhece na primeira olhada. É o que separa marca de template.</p>
+      </div>
+    </div>
+    <div class="principle">
+      <div class="num">03</div>
+      <div>
+        <h4>Três clientes <em>por vez.</em></h4>
+        <p>O limite é proposital. Não fazemos volume, fazemos qualidade. Trabalhar com três projetos simultaneamente garante que cada um receba a obsessão que se paga.</p>
+      </div>
+    </div>
+    <div class="principle">
+      <div class="num">04</div>
+      <div>
+        <h4>Português <em>direto.</em></h4>
+        <p>Sem anglicismos gratuitos, sem "soluções holísticas", sem jargão de agência. Falamos como pensamos: claro, técnico, sem distância desnecessária.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact wrap" id="contato">
+  <span class="mono">04 / Contato</span>
+  <h2>Vamos conversar?</h2>
+  <a href="mailto:hinoflex@gmail.com?subject=Projeto%20Mezzetti%E2%81%B4%E2%81%B0%E2%81%B9%E2%81%B6" class="email">
+    hinoflex@gmail.com <span class="arrow">→</span>
+  </a>
+  <p class="sub" style="max-width:42ch">Conte o projeto em poucas linhas. Respondemos em até 48 horas úteis com próximos passos e uma conversa de alinhamento.</p>
+  <div class="socials">
+    <a href="#" target="_blank" rel="noopener">Instagram</a>
+    <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="#" target="_blank" rel="noopener">Behance</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="wrap">
+  <div class="left">
+    <svg><use href="#glyph"/></svg>
+    <span class="word">Mezz<em style="font-style:italic">e</em>tti<span class="exp">4096</span></span>
+  </div>
+  <div class="mono">© 2026 · Mezzetti Studio · São Paulo, BR</div>
+</footer>
+
+</body>
+</html>
